@@ -1,7 +1,16 @@
-# Experiment--05-Implementation-of-flipflops-using-verilog
-### AIM: To implement all the flipflops using verilog and validating their functionality using their functional tables
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+## NAME : AVINASH T
+## ROLL NO : 23014109
+
+
+# Experiment 05 Implementation of flipflops using verilog
+
+### AIM:
+ To implement all the flipflops using verilog and validating their functionality using their functional tables
+
+## EQUIPMENTS REQUIRED 
+ HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
+ SOFTWARE REQUIRED:   Quartus prime
+ 
 ### THEORY 
 SR Flip-Flop
 SR flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, SR latch operates with enable signal. The circuit diagram of SR flip-flop is shown in the following figure.
@@ -102,33 +111,81 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
 ### Procedure
-/* write all the steps invloved */
 
 
 
 ### PROGRAM 
-/*
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+
+## SR FLIPFLOP
+module flipflops(S,R,clk,Q,Qbar);
+
+input S,R,clk;
+
+output reg Q;
+
+output reg Qbar;
+
+initial Q=0;
+
+initial Qbar=1;
+
+always @(posedge clk)
+
+begin
+
+Q=S|((~R)&Q);
+
+Qbar=R|((~S)&(Qbar));
+
+end
+
+endmodule
+
+
+## D FLIPFLOP
+module experiment5(d,clk,q,qbar);
+
+input d,clk;
+
+output q,qbar;
+
+reg q,qbar;
+
+always @(posedge clk)
+
+begin 
+
+q<=d;
+
+qbar<=~q;
+
+end 
+
+endmodule 
+
+
+
+
+## RTL REALIZATION
+
+## SR FLIPFLOP
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/7f24ab1e-6be0-4eb7-acbd-8380151bc9bd)
+
+## D FLIPFLOP 
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/e140a1b8-b4c3-4650-b3fa-cb17633bf316)
+
+
+
+
+
+## TRUTH TABLE
 
 
 
 
 
 
-### RTL LOGIC FOR FLIPFLOPS 
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR FLIP FLOPS 
+## TIMING DIAGRAM
 
 
 
@@ -138,3 +195,4 @@ RegisterNumber:
 
 
 ### RESULTS 
+
