@@ -1,4 +1,5 @@
 ## NAME : AVINASH T
+
 ## ROLL NO : 23014109
 
 
@@ -113,8 +114,13 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ### Procedure
 
 
+The SR flip-flop is the simplest type of flip-flop. It has two inputs, S (Set) and R (Reset), and two outputs, Q and Q' (not Q). The output of the SR flip-flop is set to 1 when the S input is high and the R input is low. The output is reset to 0 when the R input is high and the S input is low. If both inputs are high, the output is unpredictable.The JK flip-flop is more versatile than the SR flip-flop. It has two inputs, J and K, and two outputs, Q and Q'. The output of the JK flip-flop toggles (changes from 0 to 1 or 1 to 0) when both inputs are high. When one input is high and the other is low, the output remains unchanged. When both inputs are low, the output depends on the previous state of the flip-flop.
+The D flip-flop is also known as a data flip-flop. It has one data input, D, and two outputs, Q and Q'. The output of the D flip-flop follows the data input on the rising edge of the clock pulse.
+The T flip-flop is also known as a toggle flip-flop. It has one input, T, and two outputs, Q and Q'. The output of the T flip-flop toggles on the rising edge of the clock pulse.
+
 
 ### PROGRAM 
+
 
 ## SR FLIPFLOP
 module flipflops(S,R,clk,Q,Qbar);
@@ -142,6 +148,7 @@ end
 endmodule
 
 
+
 ## D FLIPFLOP
 module experiment5(d,clk,q,qbar);
 
@@ -164,6 +171,59 @@ end
 endmodule 
 
 
+## JK FLIPFLOP
+
+module flipflops(J,K,clk,Q,Qbar);
+
+input J,K,clk;
+
+output reg Q;
+
+output reg Qbar;
+
+initial Q=0;
+
+initial Qbar=1;
+
+always @(posedge clk)
+
+begin
+
+Q=(J&(~Q))|((~K)&Q);
+
+Qbar=((~J)&(Qbar))|K&(~Qbar);
+
+end
+
+endmodule
+
+
+
+
+## T FLIPFLOP
+ 
+module exp_5c(clk,T,q,qbar);
+
+input clk,T;
+
+output q,qbar;
+
+reg q,qbar;
+
+always @(posedge clk)
+
+begin
+
+q<=(T&~q)|(~T&q);
+
+qbar<=~q;
+
+end 
+
+endmodule
+
+
+
 
 
 ## RTL REALIZATION
@@ -171,14 +231,40 @@ endmodule
 ## SR FLIPFLOP
 ![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/7f24ab1e-6be0-4eb7-acbd-8380151bc9bd)
 
+
+
 ## D FLIPFLOP 
 ![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/e140a1b8-b4c3-4650-b3fa-cb17633bf316)
+
+
+
+## JK FLIPFLOP
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/e8b1f1be-c450-4f2b-9202-f0b75c57ee9a)
+
+
+## T FLIPFLOP
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/cad19860-15a9-42c3-bb3e-9a03d2c574cc)
 
 
 
 
 
 ## TRUTH TABLE
+
+## SR FLIPFLOP
+
+
+
+## D FLIPFLOP
+
+
+
+## JK FLIPFLOP
+
+
+
+## T FLIPFLOP
+
 
 
 
@@ -188,6 +274,19 @@ endmodule
 ## TIMING DIAGRAM
 
 
+## SR FLIPFLOP
+
+
+
+## D FLIPFLOP
+
+
+
+## JK FLIPFLOP
+
+
+
+## T FLIPFLOP
 
 
 
