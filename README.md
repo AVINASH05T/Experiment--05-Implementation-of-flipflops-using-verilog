@@ -253,18 +253,23 @@ endmodule
 
 ## SR FLIPFLOP
 
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/b7d427c9-132b-4329-9eff-df0386e546e9)
 
 
 ## D FLIPFLOP
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/9dba2998-a50e-42a6-9682-4527f488f0fb)
 
 
 
 ## JK FLIPFLOP
 
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/efdc37e6-7829-403d-b867-b7c127563c08)
+
 
 
 ## T FLIPFLOP
 
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/76da2e8f-1632-4471-becd-aa9796016806)
 
 
 
@@ -276,17 +281,21 @@ endmodule
 
 ## SR FLIPFLOP
 
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/f279d870-bde0-4440-b48a-c5cfa0c0851a)
 
 
 ## D FLIPFLOP
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/f01fd230-285a-4e02-a1ff-baa084805d54)
 
 
 
 ## JK FLIPFLOP
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/93a24668-0be2-4848-961f-a72470b8657b)
 
 
 
 ## T FLIPFLOP
+![image](https://github.com/AVINASH05T/Experiment--05-Implementation-of-flipflops-using-verilog/assets/151514286/b21c9e16-91ac-414f-8c1e-63e802749ae2)
 
 
 
@@ -294,4 +303,4 @@ endmodule
 
 
 ### RESULTS 
-
+Thus, the implementation of SR,JK,D and T flipflops using nand gates are done sucessfully
